@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PID Tanker Selection</title>
+  <style>
+    /* Body styles */
+    body {
+      background: linear-gradient(to right, #fcfeff 0%, #65adff 100%); /* Change body background color to red */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+
+    /* Box styles */
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+
+    .image-box {
+      margin-top: 100px;
+      width: 150px;
+      height: 150px;
+      background-color: rgba(0, 0, 0, 0); /* Change background color to transparent */
+      border: 4px solid #154bb8;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Image styles */
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Name styles */
+    .tap-name {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      margin-top: 0px;
+    }
+
+    /* Hover effect */
+    .image-box:hover {
+      box-shadow: 0 0 100px rgba(11, 11, 144, 0.985);
+    }
+  </style>
+</head>
+<body>
+  <h1 align="center">Select the Tanker!</h1>
+  <div class="image-container">
+    <div class="image-box" onclick="redirectToConfirmation('Tanker-1')">
+      <img src="water-tap.jpg" alt="Image 1">
+    </div>
+    <div class="image-box" onclick="redirectToConfirmation('Tanker-2')">
+      <img src="water-tap.jpg" alt="Image 2">
+    </div>
+    <div class="image-box" onclick="redirectToConfirmation('Tanker-3')">
+      <img src="water-tap.jpg" alt="Image 3">
+    </div>
+    <div class="image-box" onclick="redirectToConfirmation('Tanker-4')">
+      <img src="water-tap.jpg" alt="Image 4">
+    </div>
+    <div class="image-box" onclick="redirectToConfirmation('Tanker-5')">
+      <img src="water-tap.jpg" alt="Image 5">
+    </div>
+  </div>
+  <div class="image-container">
+    <span class="tap-name">Tanker-1</span>
+    <span class="tap-name">Tanker-2</span>
+    <span class="tap-name">Tanker-3</span>
+    <span class="tap-name">Tanker-4</span>
+    <span class="tap-name">Tanker-5</span>
+  </div>
+
+  <script>
+    function redirectToConfirmation(tankerName) {
+      // Redirect to confirmation page with selected tanker name
+      window.location.href = "ct4.html?tanker=" + encodeURIComponent(tankerName);
+    }
+  </script>
+</body>
+</html>

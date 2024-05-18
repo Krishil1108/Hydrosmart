@@ -1,0 +1,92 @@
+<!-- select-location.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Location</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .go-container {
+      margin-top: 10px;
+      margin-left: 40px; /* Adjust as needed */
+      padding: 0px 0px;
+      background: linear-gradient(120deg, #ff6e7f 0%, #bfe9ff 100%);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="location-box" id="location-1" data-location="Location 1" onclick="selectLocation(this)">
+    <span class="point"></span>
+    <span class="name">PIT</span>
+  </div>
+  <div class="location-box" id="location-2" data-location="Location 2" onclick="selectLocation(this)">
+    <span class="point"></span>
+    <span class="name">PIET</span>
+  </div>
+  <div class="location-box" id="location-3" data-location="Location 3" onclick="selectLocation(this)">
+    <span class="point"></span>
+    <span class="name">PIA</span>
+  </div>
+
+  <div class="location-box" id="location-4" data-location="Location 4" onclick="selectLocation(this)">
+    <span class="point"></span>
+    <span class="name">PID</span>
+  </div>
+  <div class="location-box" id="location-5" data-location="Location 5" onclick="selectLocation(this)">
+    <span class="point"></span>
+    <span class="name">PU_CIRCLE</span>
+  </div>
+
+  <div class="go-container">
+    <!-- Use EJS syntax to include dynamic values -->
+    <button id="go-button" class="go-button" onclick="goToTankerPage()">Go</button>
+  </div>
+
+  <script>
+    function selectLocation(locationElement) {
+      // Remove 'selected' class from all location boxes
+      document.querySelectorAll('.location-box').forEach(box => box.classList.remove('selected'));
+      // Add 'selected' class to the clicked location box
+      locationElement.classList.add('selected');
+    }
+
+    function goToTankerPage() {
+      const selectedLocationElement = document.querySelector('.location-box.selected');
+      if (selectedLocationElement) {
+        // Get the data-location attribute value of the selected location
+        const selectedLocation = selectedLocationElement.getAttribute('data-location').toUpperCase();
+        
+        // Define the tanker page corresponding to the selected location
+        const tankerPages = {
+          'LOCATION 1': 'tanker1.html',
+          'LOCATION 2': 'tanker2.html',
+          'LOCATION 3': 'tanker3.html',
+          'LOCATION 4': 'tanker4.html',
+          'LOCATION 5': 'tanker5.html' // Change 'LOCATION 1' to your actual location value
+        };
+
+        // Redirect to the appropriate tanker page if a mapping exists
+        if (tankerPages[selectedLocation]) {
+          window.location.href = tankerPages[selectedLocation];
+        } else {
+          console.error('Tanker page not defined for the selected location.', selectedLocation);
+        } 
+      } else {
+        console.error('No location selected.');
+      }
+    function redirectToConfirmation(selectedLocation) {
+      // Redirect to confirmation page with selected tanker name
+      window.location.href = "confirmationdisplay.html?location=" + encodeURIComponent(selectedLocation);
+    }
+  }
+  </script>
+</body>
+</html>

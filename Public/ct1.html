@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation</title>
+</head>
+<body>
+    <style>
+        body, html {
+          background-color: black;
+          height: 100%;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; /* Align items vertically */
+        }
+        #confirmation-container {
+          text-align: center;
+          color: green;
+          font-size: 24px; /* Adjust font size */
+        }
+        #confirmation-message {
+          margin-top: 20px; /* Add spacing between elements */
+        }
+      </style>
+    </head>
+    <body>
+      <div id="confirmation-container">
+        <h1>Booking Confirmation</h1>
+        
+        <div id="confirmation-message"></div>
+      </div>
+
+  <script>
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(window.location.href);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    // Get selected tanker and location from URL parameters
+    var selectedTanker = getUrlParameter('tanker');
+    var selectedLocation = getUrlParameter('Location');
+
+    // Display confirmation message
+    var confirmationMessage = document.getElementById('confirmation-message');
+    confirmationMessage.innerHTML = "Your slot is booked at PIT at " + selectedTanker + "!!";
+  </script>
+</body>
+</html>

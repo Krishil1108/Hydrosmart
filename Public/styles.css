@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 45px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#login-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+    width: 300px;
+}
+#login-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#login-form input[type="email"],
+#login-form input[type="password"],
+#login-form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 90%;
+}
+#login-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#login-form button:hover {
+    background-color: #45a049;
+}
+#login-form a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+/* location_style.css */
+
+/* Add gradient background for the location container */
+/* location_style.css */
+
+/* Add gradient background for the location container */
+/* location_style.css */
+
+/* Add gradient background for the location container */
+/* location_style.css */
+
+/* Add gradient background for the location container */
+/* location_style.css */
+
+/* Add gradient background for the location container */
+.location-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(120deg, #d4385c 0%, #e69b0f 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Display location boxes in a row layout */
+.location-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align boxes to the center horizontally */
+}
+
+/* Adjust styling for the location boxes */
+.location-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to left, #fff1eb 0%, #4cc6fe 100%);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin: 50px; /* Adjust spacing between boxes */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+/* Add animation on hover for the location boxes */
+.location-box:hover {
+    transform: scale(1.1);
+}
+
+/* Add animation for the selected location box */
+.location-box.selected {
+    background: linear-gradient(to right, #fff1eb 0%, #000a99 100%);
+    color: #fff;
+    transform: scale(1.7);
+}
+
+/* Adjust positioning for the "Go" button */
+.go-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.go-button {
+    padding: 15px 30px;
+    background: linear-gradient(120deg, #ff6e7f 0%, #bfe9ff 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.go-button:hover {
+    background: linear-gradient(120deg, #ff8e61 0%, #a355f7 100%);
+}
