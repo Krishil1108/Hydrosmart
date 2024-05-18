@@ -1,0 +1,337 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Background image style */
+        body {
+            background-image: url('image.jpg');
+            background-size: cover; /* Ensure the background image covers the entire viewport */
+            background-position: center; /* Center the background image */
+            height: 100vh; /* Ensure the body takes up the full viewport height */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Use flexbox for centering content */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+
+        /* Form container style */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+            text-align: center;
+        }
+
+        /* Form input style */
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Login button style */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Forgot password link style */
+        #forgot-password {
+            display: block; /* Ensure the link takes up the full width */
+            margin-top: 10px; /* Add some spacing between the button and the link */
+            color: #007bff; /* Match the link color with the button background */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+            <button type="submit">Login</button>
+            <a href="#" id="forgot-password">Forgot Password?</a>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="content">
+        <header>Login Form</header>
+        <form action="#">
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" required placeholder="Email or Phone">
+          </div>
+          <div class="field space">
+            <span class="fa fa-lock"></span>
+            <input type="password" class="pass-key" required placeholder="Password">
+            <span class="show">SHOW</span>
+          </div>
+          <div class="pass">
+            <a href="#">Forgot Password?</a>
+          </div>
+          <div class="field">
+            <input type="submit" value="LOGIN">
+          </div>
+        </form>
+        <div class="login">Or login with</div>
+        <div class="links">
+          <div class="facebook">
+            <i class="fab fa-facebook-f"><span>Facebook</span></i>
+          </div>
+          <div class="instagram">
+            <i class="fab fa-instagram"><span>Instagram</span></i>
+          </div>
+        </div>
+        <div class="signup">Don't have account?
+          <a href="#">Signup Now</a>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      function redirectToLocation() {
+        // Redirect to location.html after successful login
+        window.location.href = "location.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="content">
+        <header>Login Form</header>
+        <form action="#" onsubmit="redirectToLocation()">
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" required placeholder="Email or Phone">
+          </div>
+          <div class="field space">
+            <span class="fa fa-lock"></span>
+            <input type="password" class="pass-key" required placeholder="Password">
+            <span class="show">SHOW</span>
+          </div>
+          <div class="pass">
+            <a href="#">Forgot Password?</a>
+          </div>
+          <div class="field">
+            <input type="submit" value="LOGIN">
+          </div>
+        </form>
+        <div class="login">Or login with</div>
+        <div class="links">
+          <div class="facebook">
+            <i class="fab fa-facebook-f"><span>Facebook</span></i>
+          </div>
+          <div class="instagram">
+            <i class="fab fa-instagram"><span>Instagram</span></i>
+          </div>
+        </div>
+        <div class="signup">Don't have account?
+          <a href="#">Signup Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="loginstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    /* Background image style */
+    body {
+      background-image: url('image.jpg');
+      background-size: cover; /* Ensure the background image covers the entire viewport */
+      background-position: center; /* Center the background image */
+      height: 100vh; /* Ensure the body takes up the full viewport height */
+      margin: 0; /* Remove default margin */
+      display: flex; /* Use flexbox for centering content */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+    }
+
+    /* Form container style */
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better readability */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+      text-align: center;
+    }
+
+    /* Form input style */
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Login button style */
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Forgot password link style */
+    #forgot-password {
+      display: block; /* Ensure the link takes up the full width */
+      margin-top: 10px; /* Add some spacing between the button and the link */
+      color: #007bff; /* Match the link color with the button background */
+      text-decoration: none;
+    }
+
+    /* Additional styling */
+    .bg-img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      width: 300px;
+    }
+
+    .field {
+      position: relative;
+    }
+
+    .fa {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0px;
+      color: #555;
+    }
+
+    .pass-key {
+      padding-left: 30px;
+    }
+
+    .show {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .pass {
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .login {
+      margin-top: 20px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .facebook,
+    .instagram {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .signup {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-img">
+    <div class="content">
+      <header>Login Form</header>
+      <form action="#" onsubmit="redirectToLocation(); return false;">
+        <div class="field">
+          <span class="fa fa-user"></span>
+          <input type="text" required placeholder="Email or Phone">
+        </div>
+        <div class="field space">
+          <span class="fa fa-lock"></span>
+          <input type="password" class="pass-key" required placeholder="Password">
+          <span class="show">SHOW</span>
+        </div>
+        <div class="pass">
+          <a href="#" id="forgot-password">Forgot Password?</a>
+        </div>
+        <div class="field">
+          <input type="submit" value="LOGIN">
+        </div>
+      </form>
+      <div class="login">Or login with</div>
+      <div class="links">
+        <div class="facebook">
+          <i class="fab fa-facebook-f"><span>Facebook</span></i>
+        </div>
+        <div class="instagram">
+          <i class="fab fa-instagram"><span>Instagram</span></i>
+        </div>
+      </div>
+      <div class="signup">Don't have an account? <a href="#">Sign Up Now</a></div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script>
+    function redirectToLocation() {
+      // Redirect to location.html after successful login
+      window.location.href = "location.html";
+    }
+  </script>
+</body>
+</html> -->

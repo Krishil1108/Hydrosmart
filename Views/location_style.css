@@ -1,0 +1,91 @@
+/* location_style.css */
+
+.location-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .location-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .location-box .name {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .location-box:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .location-box.selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .go-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .go-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .location-box {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .location-box .point {
+      top: -15px;
+      width: 15px;
+      height: 15px;
+    }
+  
+    .location-box .name {
+      font-size: 12px;
+    }
+  
+    .location-boxes {
+      flex-wrap: wrap;
+    }
+  
+    .location-box {
+      margin: 10px 0;
+    }
+  }
